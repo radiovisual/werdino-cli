@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"repository": "radiovisual/werdino-cli",
 	"author": {
-		"name": "",
+		"name": "Michael Wuergler",
 		"email": "wuergler@gmail.com",
 		"url": "numetriclabs.com"
 	},
@@ -14,7 +14,7 @@
 		"node": ">=4"
 	},
 	"scripts": {
-		"test": "xo && nyc ava"
+		"test": "xo"
 	},
 	"files": [
 		"index.js",
@@ -37,8 +37,6 @@
 		"werdino": "^1.1.0"
 	},
 	"devDependencies": {
-		"ava": "^0.20.0",
-		"nyc": "^11.0.0",
 		"xo": "^0.18.2"
 	}
 }

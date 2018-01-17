@@ -27,27 +27,18 @@ function print(text) {
 		const mealTitle = '[MEAL TITLE] ';
 
 		if (s.indexOf(title) === 0) {
-			str += boxen(chalk.magenta(titleize(s.replace(title, ''))), { padding: 0, margin: 0, borderStyle: 'round', dimBorder: true });
+			str += boxen(chalk.magenta(titleize(s.replace(title, ''))), {padding: 0, margin: 0, borderStyle: 'round', dimBorder: true});
 			str += '\n\n';
-		}
-
-		else if (s.indexOf(mealTitle) === 0) {
+		} else if (s.indexOf(mealTitle) === 0) {
 			str += chalk.cyan(`    ${titleize(s.replace(mealTitle, ''))}`);
 			str += chalk.gray(' | ');
-			//str += '\n';
-		}
-
-		else if (s.indexOf(descr) === 0) {
+		} else if (s.indexOf(descr) === 0) {
 			str += chalk.white(`${s.replace(descr, '')}`);
 			str += '\n';
-		}
-
-		else if (s.indexOf(price) === 0) {
+		} else if (s.indexOf(price) === 0) {
 			str += chalk.gray(`    ${s.replace(price, '')}`);
 			str += '\n';
-		}
-
-		else if (s.indexOf('---' === 0)) {
+		} else if (s.indexOf('---' === 0)) {
 			str += '\n';
 		}
 	});
@@ -56,20 +47,11 @@ function print(text) {
 	console.log(str);
 }
 
-module.exports = (input, opts) => {
-	if (typeof input !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof input}`);
-	}
-
-	opts = opts || {};
-
+module.exports = () => {
 	let german = '';
-	
-	werdino().then((data) => {
-		// console.log(JSON.stringify(data, null, 2));
 
+	werdino().then(data => {
 		data.forEach(item => {
-
 			const title = condense(item.title);
 
 			german += `[TITLE] ${title}\n`;
@@ -83,11 +65,8 @@ module.exports = (input, opts) => {
 			german += '---\n';
 		});
 
-		// print(german);
-
 		translate(german).then(data => {
 			spinner.succeed();
-
 			print(data.text);
 		});
 	});
