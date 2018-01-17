@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install werdino-cli
+$ npm install -g werdino-cli
 ```
 
 ## Usage
