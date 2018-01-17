@@ -1,6 +1,6 @@
 # werdino-cli [![Build Status](https://travis-ci.org/radiovisual/werdino-cli.svg?branch=master)](https://travis-ci.org/radiovisual/werdino-cli)
 
-> Werdino daily menu translated to English.
+> :pizza: :hamburger: The Werdino daily menu, translated to English in your Terminal
 
 
 ## Install
