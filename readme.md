@@ -2,6 +2,7 @@
 
 > :pizza: :hamburger: The Werdino daily menu, translated to English in your Terminal
 
+:warning: *THIS MODULE IS DEPRECATED*. Use [werdino-daily](https://github.com/radiovisual/werdino-daily)
 
 ## Install
 
